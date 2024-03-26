@@ -1,0 +1,51 @@
+*{
+     padding: 0;
+     margin: 0;
+     box-sizing: border-box;
+     font-family: sans-serif;
+}
+.container{
+     width: 100vw;
+     height: 100vh;
+     background-image:url(resources/pics/pexels-pixabay-33109.jpg);
+     background-size: cover;
+     background-position: center;
+}
+
+.menu {
+     position: absolute;
+     left: 50%;
+     transform: translateX(-50%);
+     width: 99vw;
+     bottom: 10px;
+     border-radius: 20px;
+     border: gray 2px solid;
+     background-color: rgb(28, 29, 29);
+
+     display: flex;
+     justify-content: space-between;
+     color: white;
+     font-weight: bold;
+}
+
+.left, .center, .right{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     padding: 10px;
+}
+
+.center{
+     gap: 30px;
+}
+
+svg{
+     fill: white;
+}
+
+svg:hover{
+     fill:rgb(168, 164, 164);
+}
+
+
+

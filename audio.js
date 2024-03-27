@@ -41,3 +41,45 @@ whiteNoiseVolume.addEventListener("input", function() {
           whiteNoise.pause();
      }
 });
+const firePlace = document.querySelector("#firePlaceAudio");
+const firePlaceVolume = document.querySelector("#firePlaceVolume");
+
+firePlaceVolume.addEventListener("input", function() {
+     firePlace.play();
+     firePlace.volume = firePlaceVolume.value;
+     if (firePlaceVolume==0) {
+          firePlace.pause();
+     }
+});
+
+const traffic = document.querySelector("#trafficAudio");
+const trafficVolume = document.querySelector("#trafficVolume");
+
+trafficVolume.addEventListener("input", function() {
+     traffic.play();
+     traffic.volume = trafficVolume.value;
+     if (trafficVolume==0) {
+          traffic.pause();
+     }
+});
+
+const underwater = document.querySelector("#underwaterAudio");
+const underwaterVolume = document.querySelector("#underwaterVolume");
+
+underwaterVolume.addEventListener("input", function() {
+     underwater.play();
+     underwater.volume = underwaterVolume.value;
+     if (underwaterVolume==0) {
+          underwater.pause();
+     }
+});
+const keyboard = document.querySelector("#keyboardAudio");
+const keyboardVolume = document.querySelector("#keyboardVolume");
+
+keyboardVolume.addEventListener("input", function() {
+     keyboard.play();
+     keyboard.volume = keyboardVolume.value;
+     if (keyboardVolume==0) {
+          keyboard.pause();
+     }
+});

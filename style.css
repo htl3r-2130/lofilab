@@ -58,6 +58,7 @@ svg{
 }
 
 .musicControls{
+     z-index: 100;
      position: absolute;
      background-color:  rgb(28, 29, 29);
      min-width: 300px; 
@@ -68,7 +69,26 @@ svg{
      resize: both;
      overflow: auto;
      opacity: 0;
+     left: 10px;
      transition: opacity 0.5s ease;
+     max-width: 99vw;
+     max-height:90vh;
+}
+.musicControls::-webkit-scrollbar{
+     width: 10px;
+}
+.musicControls::-webkit-scrollbar-track{
+     background-color: rgb(28, 29, 29);
+     border-radius: 10px;
+     margin-block: 10px;
+}
+.musicControls::-webkit-scrollbar-corner{
+     width: 10px;
+     height: 10px;
+}
+.musicControls::-webkit-scrollbar-thumb{
+     background-color: darkslategray;
+     border-radius: 20px;
 }
 
 .musicVolume{
@@ -161,7 +181,7 @@ svg{
      background-color: darkslategray;
      border-radius: 10px;
 }
-.softRain, .flowingRiver, .birds, .whiteNoise{
+.softRain, .flowingRiver, .birds, .whiteNoise, .firePlace, .traffic, .underwater, .keyboard{
      width: 100%;
      display: flex;
      align-items: center;
@@ -171,16 +191,6 @@ svg{
      border-radius: 10px;
      text-align: center;
 }
-.ambientSounds p{
-     width: 120px;
-}
-
-.menuBtnClicked{
-     border-bottom: 2px gray solid;
-}
-.visible {
-     opacity: 1;
- }
 
 input{
      -webkit-appearance: none;
@@ -200,3 +210,13 @@ input::-webkit-slider-thumb{
      cursor: pointer;
 }
  
+.ambientSounds p{
+     width: 120px;
+}
+
+.menuBtnClicked{
+     border-bottom: 2px gray solid;
+}
+.visible {
+     opacity: 1;
+ }

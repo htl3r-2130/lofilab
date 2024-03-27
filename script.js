@@ -1,38 +1,39 @@
 const musicControlsBtn = document.querySelector(".musicControls-btn");
-musicControlsBtn.addEventListener("click", function(){
-
-     if (musicControlsBtn.classList.contains("menuBtnClicked")) {
-          musicControls.style.display="none";
-          musicControlsBtn.classList.remove("menuBtnClicked");
-     }
-     else{
-          musicControls.style.display="inline";
-          musicControlsBtn.classList.add("menuBtnClicked");
-     }
-     
-});
-
 const backgroundSelectBtn = document.querySelector(".background-btn");
-backgroundSelectBtn.addEventListener("click", function(){
-     if (backgroundSelectBtn.classList.contains("menuBtnClicked")) {
-          backgroundSelect.style.display="none";
-          backgroundSelectBtn.classList.remove("menuBtnClicked");
-     }
-     else{
-          backgroundSelect.style.display="flex";
-          backgroundSelectBtn.classList.add("menuBtnClicked");
-     }
-});
-
+const musicControls = document.querySelector(".musicControls");
 const backgroundSelect = document.querySelector(".backgroundSelect");
 
-const musicControls = document.querySelector(".musicControls");
+musicControlsBtn.addEventListener("click", function(){
+     if (musicControlsBtn.classList.contains("menuBtnClicked")) {
+          musicControls.classList.remove("visible");
+          musicControlsBtn.classList.remove("menuBtnClicked");
+     } else {
+          musicControls.classList.add("visible")
+          musicControlsBtn.classList.add("menuBtnClicked");
+     }
+});
+
+backgroundSelectBtn.addEventListener("click", function(){
+     if (backgroundSelectBtn.classList.contains("menuBtnClicked")) {
+          backgroundSelect.classList.remove("visible");
+          backgroundSelectBtn.classList.remove("menuBtnClicked");
+     } else {
+          backgroundSelect.classList.add("visible");
+          backgroundSelectBtn.classList.add("menuBtnClicked");
+     }
+     console.log(backgroundSelect.className);
+});
+
 let offsetX, offsetY, isDragging = false;
 
 musicControls.addEventListener('mousedown', function(event) {
-     //isDragging = true;
      offsetX = event.clientX - musicControls.getBoundingClientRect().left;
      offsetY = event.clientY - musicControls.getBoundingClientRect().top;
+ });
+ 
+ backgroundSelect.addEventListener('mousedown', function(event) {
+     offsetX = event.clientX - backgroundSelect.getBoundingClientRect().left;
+     offsetY = event.clientY - backgroundSelect.getBoundingClientRect().top;
  });
  
  document.addEventListener('mousemove', function(event) {
@@ -55,7 +56,3 @@ musicControls.addEventListener('mousedown', function(event) {
  document.addEventListener('mouseup', function() {
      isDragging = false;
  });
-
-const musicMenu = document.querySelector(".musicMenu");
-
-const soundMenu = document.querySelector(".soundMenu");

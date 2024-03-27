@@ -31,9 +31,6 @@
                     <div class="background-btn">
                          <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M360-400h400L622-580l-92 120-62-80-108 140Zm-40 160q-33 0-56.5-23.5T240-320v-480q0-33 23.5-56.5T320-880h480q33 0 56.5 23.5T880-800v480q0 33-23.5 56.5T800-240H320Zm0-80h480v-480H320v480ZM160-80q-33 0-56.5-23.5T80-160v-560h80v560h560v80H160Zm160-720v480-480Z"/></svg>
                     </div>
-                    <div class="clock-btn">
-                         <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="m612-292 56-56-148-148v-184h-80v216l172 172ZM480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-400Zm0 320q133 0 226.5-93.5T800-480q0-133-93.5-226.5T480-800q-133 0-226.5 93.5T160-480q0 133 93.5 226.5T480-160Z"/></svg>
-                    </div>
                </div>
                <div class="right">
                     <div class="settings-btn">
@@ -65,17 +62,13 @@
                </div>
 
                <div class="musicSelect-btns">
-                    <div class="sleepy">
-                         <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M40-200v-600h80v400h320v-320h320q66 0 113 47t47 113v360h-80v-120H120v120H40Zm240-240q-50 0-85-35t-35-85q0-50 35-85t85-35q50 0 85 35t35 85q0 50-35 85t-85 35Zm240 40h320v-160q0-33-23.5-56.5T760-640H520v240ZM280-520q17 0 28.5-11.5T320-560q0-17-11.5-28.5T280-600q-17 0-28.5 11.5T240-560q0 17 11.5 28.5T280-520Zm0-40Zm240-80v240-240Z"/></svg>
-                         <p class="mlabel">Sleepy</p>
+                    <div class="lofi">
+                         <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M360-120H200q-33 0-56.5-23.5T120-200v-280q0-75 28.5-140.5t77-114q48.5-48.5 114-77T480-840q75 0 140.5 28.5t114 77q48.5 48.5 77 114T840-480v280q0 33-23.5 56.5T760-120H600v-320h160v-40q0-117-81.5-198.5T480-760q-117 0-198.5 81.5T200-480v40h160v320Zm-80-240h-80v160h80v-160Zm400 0v160h80v-160h-80Zm-400 0h-80 80Zm400 0h80-80Z"/></svg>
+                         <p>Lofi</p>
                     </div>
-                    <div class="jazz">
-                         <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M200-160v-80h80v-160L40-760h560L360-400v160h80v80H200Zm36-440h168l56-80H180l56 80Zm404 440q-50 0-85-35t-35-85q0-50 35-85t85-35q11 0 21 1.5t19 6.5v-368h200v120H760v360q0 50-35 85t-85 35Z"/></svg>
-                         <p class="mlabel">Jazz</p>
-                    </div>
-                    <div class="chill">
-                         <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M160-120v-80h640v80H160Zm160-160q-66 0-113-47t-47-113v-400h640q33 0 56.5 23.5T880-760v120q0 33-23.5 56.5T800-560h-80v120q0 66-47 113t-113 47H320Zm0-80h240q33 0 56.5-23.5T640-440v-320H240v320q0 33 23.5 56.5T320-360Zm400-280h80v-120h-80v120ZM320-360h-80 400-320Z"/></svg>
-                         <p class="mlabel">Chill</p>
+                    <div class="classic">
+                         <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h560q33 0 56.5 23.5T840-760v560q0 33-23.5 56.5T760-120H200Zm0-80h130v-180h-10q-17 0-28.5-11.5T280-420v-340h-80v560Zm430 0h130v-560h-80v340q0 17-11.5 28.5T640-380h-10v180Zm-240 0h180v-180h-10q-17 0-28.5-11.5T520-420v-340h-80v340q0 17-11.5 28.5T400-380h-10v180Z"/></svg>
+                         <p>Classical</p>
                     </div>
                </div>
 
@@ -140,6 +133,34 @@
                </div>
           </div>
 
+          <div class="timer visible">
+               <div class="timerSelectTab">
+                    <p id="switchClock">Clock</p>
+                    <p id="switchTimer" class="menuBtnClicked">Timer</p>
+               </div>
+               <div class="clock">
+                    <h1 id="clockDay">Monday</h1>
+                    <h1 id="clockTime">10:00</h1>
+               </div>
+               <div class="timerTab">
+                    <div class="timerDisplay">
+                         <h1 id="timerTime">00:00</h1>
+                    </div>
+                    <div class="timerSelect">
+                         <div class="sub">
+                              <input type="text" name="timerInp" id="timerInp" placeholder="0">
+                              <label for="timerInp">min</label>
+                         </div>
+                         <div class="timerButtons">
+                              <button id="startTimer">Start</button>
+                              <button id="stopTimer"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M520-200v-560h240v560H520Zm-320 0v-560h240v560H200Zm400-80h80v-400h-80v400Zm-320 0h80v-400h-80v400Zm0-400v400-400Zm320 0v400-400Z"/></svg></button>
+                              <button id="resumeTimer"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M320-200v-560l440 280-440 280Zm80-280Zm0 134 210-134-210-134v268Z"/></svg></button>
+                              <button id="resetTimer"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M320-640v320-320Zm-80 400v-480h480v480H240Zm80-80h320v-320H320v320Z"/></svg></button>
+                         </div>
+                    </div>
+               </div>
+          </div>
+
           <div class="backgroundSelect">
                <img id="img1" src="resources/pics/pexels-james-wheeler-417074.jpg">
                <img id="img2" src="resources/pics/pexels-pixabay-33109.jpg">
@@ -153,5 +174,7 @@
      <script src="menuClock.js" defer></script>
      <script src="background.js" defer></script>
      <script src="audio.js" defer></script>
+     <script src="clock.js" defer></script>
+     <script src="timer.js" defer></script>
 </body>
 </html>

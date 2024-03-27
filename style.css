@@ -63,6 +63,8 @@ svg{
      background-color:  rgb(28, 29, 29);
      min-width: 300px; 
      min-height: 300px;
+     width: 300px;
+     height: 300px;
      user-select: none;
      border: gray 2px solid;
      border-radius: 20px;
@@ -71,8 +73,8 @@ svg{
      opacity: 0;
      left: 10px;
      transition: opacity 0.5s ease;
-     max-width: 99vw;
-     max-height:90vh;
+     max-width: 98vw;
+     max-height:650px;
 }
 .musicControls::-webkit-scrollbar{
      width: 10px;
@@ -130,14 +132,14 @@ svg{
      border-radius: 10px;
 }
 
-.sleepy svg, .jazz svg, .chill svg{
+.lofi svg, .classic svg{
      height: 40px;
      width: 40px;
      padding: 7px;
      border-radius: 50%;
      background-color: gray;
 }
-.sleepy, .jazz, .chill{
+.lofi, .classic{
      display: flex;
      flex-direction: column;
      justify-content: center;
@@ -192,7 +194,111 @@ svg{
      text-align: center;
 }
 
-input{
+.timer{
+     z-index: 90;
+     position: absolute;
+     background-color:  rgb(28, 29, 29);
+     width: 300px;
+     height: 300px;
+     user-select: none;
+     border: gray 2px solid;
+     border-radius: 20px;
+     opacity: 0;
+     right: 10px;
+     transition: opacity 0.5s ease;
+}
+
+.timerSelectTab{
+     margin: 10px;
+     padding: 5px;
+     display: flex;
+     gap: 10px;
+     justify-content: space-evenly;
+     align-items: center;
+     background-color: darkslategray;
+     border-radius: 10px;
+}
+.timerSelectTab p{
+     color: lightgray;
+}
+
+.timerSelectTab p:hover{
+     color: white;
+}
+.clock{
+     display: none;
+     width: 100%;
+     flex-direction: column;
+     margin-top: 10%;
+     align-items: center;
+     justify-content: center;
+}
+#clockDay{
+     font-size: 2.5rem;
+     letter-spacing: 3px;
+     text-transform:uppercase;
+}
+
+.timerTab{
+     display: flex;
+     width: 100%;
+     flex-direction: column;
+     margin-top: 10%;
+     align-items: center;
+     justify-content: center;
+     gap: 20px;
+}
+
+.timerButtons{
+     display: flex;
+     align-items: center;
+     justify-content: space-evenly;
+}
+#startTimer{
+     width: 100%;
+     background-color: darkslategray;
+     padding: 10px 20px;
+     box-shadow: none;
+     border: none;
+     border-radius: 10px;
+     cursor: pointer;
+}
+#stopTimer, #resumeTimer, #resetTimer{
+     background-color: darkslategray;
+     display: none;
+     align-items: center;
+     justify-content: center;
+     box-shadow: none;
+     border: none;
+     padding: 10px;
+     height: 40px;
+     width: 40px;
+     border-radius: 50%;
+}
+.timerSelect{
+     display: flex;
+     flex-direction: column;
+     gap: 10px;
+}
+#timerInp{
+     border-radius: 5px;
+     border: none;
+     padding: 5px;
+     text-align: end;
+     color: black;
+     font-size: 1rem;
+     font-weight: bold;
+}
+#timerInp:focus{
+     border: none;
+     outline: none;
+}
+
+#switchTimer{
+     color: white;
+}
+
+.musicControls input{
      -webkit-appearance: none;
      height: 3px;
      background-color: lightblue;
@@ -200,7 +306,7 @@ input{
      outline: none;
      border: none;
 }
-input::-webkit-slider-thumb{
+.musicControls input::-webkit-slider-thumb{
      -webkit-appearance: none;
      height: 15px;
      width: 15px;

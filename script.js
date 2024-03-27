@@ -2,6 +2,13 @@ const musicControlsBtn = document.querySelector(".musicControls-btn");
 const backgroundSelectBtn = document.querySelector(".background-btn");
 const musicControls = document.querySelector(".musicControls");
 const backgroundSelect = document.querySelector(".backgroundSelect");
+const timerBtn = document.querySelector(".timer-btn");
+const timer = document.querySelector(".timer");
+
+const switchTimer = document.querySelector("#switchTimer");
+const switchClock = document.querySelector("#switchClock");
+const clock = document.querySelector(".clock");
+const timerTab = document.querySelector(".timerTab");
 
 musicControlsBtn.addEventListener("click", function(){
      if (musicControlsBtn.classList.contains("menuBtnClicked")) {
@@ -13,6 +20,16 @@ musicControlsBtn.addEventListener("click", function(){
      }
 });
 
+timerBtn.addEventListener("click", function(){
+     if (timerBtn.classList.contains("menuBtnClicked")) {
+          timer.classList.remove("visible");
+          timerBtn.classList.remove("menuBtnClicked");
+     } else {
+          timer.classList.add("visible")
+          timerBtn.classList.add("menuBtnClicked");
+     }
+});
+
 backgroundSelectBtn.addEventListener("click", function(){
      if (backgroundSelectBtn.classList.contains("menuBtnClicked")) {
           backgroundSelect.classList.remove("visible");
@@ -21,38 +38,18 @@ backgroundSelectBtn.addEventListener("click", function(){
           backgroundSelect.classList.add("visible");
           backgroundSelectBtn.classList.add("menuBtnClicked");
      }
-     console.log(backgroundSelect.className);
 });
 
-let offsetX, offsetY, isDragging = false;
+switchClock.addEventListener("click", function(){
+     clock.style.display="flex";
+     timerTab.style.display="none";
+     switchClock.classList.add("menuBtnClicked");
+     switchTimer.classList.remove("menuBtnClicked");
+})
 
-musicControls.addEventListener('mousedown', function(event) {
-     offsetX = event.clientX - musicControls.getBoundingClientRect().left;
-     offsetY = event.clientY - musicControls.getBoundingClientRect().top;
- });
- 
- backgroundSelect.addEventListener('mousedown', function(event) {
-     offsetX = event.clientX - backgroundSelect.getBoundingClientRect().left;
-     offsetY = event.clientY - backgroundSelect.getBoundingClientRect().top;
- });
- 
- document.addEventListener('mousemove', function(event) {
-      if (isDragging) {
-          let x = event.clientX - offsetX;
-          let y = event.clientY - offsetY;
-  
-          const menuHeight = document.querySelector('.menu').offsetHeight;
-          const maxY = window.innerHeight - musicControls.offsetHeight - menuHeight - 20;
-  
-          x = Math.min(Math.max(x, 0), window.innerWidth - musicControls.offsetWidth);
-          y = Math.min(Math.max(y, 0), maxY);
-  
-          musicControls.style.left = x + 'px';
-          musicControls.style.top = y + 'px';
-      }
-  });
-  
- 
- document.addEventListener('mouseup', function() {
-     isDragging = false;
- });
+switchTimer.addEventListener("click", function(){
+     clock.style.display="none";
+     timerTab.style.display="flex";
+     switchClock.classList.remove("menuBtnClicked");
+     switchTimer.classList.add("menuBtnClicked");
+})

@@ -41,6 +41,8 @@ backgroundSelectBtn.addEventListener("click", function(){
 });
 
 switchClock.addEventListener("click", function(){
+     switchClock.style.color="white";
+     switchTimer.style.color="lightgray";
      clock.style.display="flex";
      timerTab.style.display="none";
      switchClock.classList.add("menuBtnClicked");
@@ -48,6 +50,8 @@ switchClock.addEventListener("click", function(){
 })
 
 switchTimer.addEventListener("click", function(){
+     switchClock.style.color="lightgray";
+     switchTimer.style.color="white";
      clock.style.display="none";
      timerTab.style.display="flex";
      switchClock.classList.remove("menuBtnClicked");
